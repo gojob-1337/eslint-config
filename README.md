@@ -18,10 +18,12 @@ You can extend our default configuration, in your own ESLint configuration:
 }
 ```
 
+_Assuming you already installed `typescript`..._
+
 ```bash
-yarn add --dev eslint @gojob/eslint-configprettier prettier
+yarn add --dev eslint @gojob/eslint-config prettier
 # or
-npm install --save-dev eslint @gojob/eslint-configprettier prettier
+npm install --save-dev eslint @gojob/eslint-config prettier
 ```
 
 ### Integration with VSCode
