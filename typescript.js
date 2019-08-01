@@ -9,7 +9,7 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   rules: {
     semi: ["error", "always"],
-    quotes: ["error", "single"],
+    'prettier/prettier': ['error', { singleQuote: true }],
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/prefer-interface": "off",
