@@ -9,6 +9,7 @@ module.exports = {
   plugins: ["@typescript-eslint"],
   rules: {
     semi: ["error", "always"],
+    "sort-imports": ["warn", { "ignoreCase": true, "ignoreDeclarationSort": true }],
     "prettier/prettier": ["error", { singleQuote: true }],
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/explicit-function-return-type": "off",
