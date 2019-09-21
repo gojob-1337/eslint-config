@@ -13,7 +13,7 @@ You can extend our default configuration, in your own ESLint configuration:
 ```javascript
 {
   "extends": [
-    "@gojob/eslint-config/typescript"
+    "@gojob/eslint-config/typescript" // or typescript-react
   ],
 }
 ```

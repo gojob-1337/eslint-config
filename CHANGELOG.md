@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.8] - 2019-09-21
+
+### Added
+
+- configuration for React: `@gojob/eslint-config/typescript-react`
+
 ## [1.0.7] - 2019-09-21
 
 ### Changed
