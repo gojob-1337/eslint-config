@@ -26,7 +26,10 @@ module.exports = {
     "import/order": [
       "warn",
       {
-        groups: ["builtin", "external", ["parent", "sibling", "index"]],
+        groups: [
+          ["builtin", "external"],
+          ["parent", "sibling", "index"]
+        ],
         "newlines-between": "always"
         // TODO: alphabetize issue, waiting for new relase (https://github.com/benmosher/eslint-plugin-import/pull/1562)
         // alphabetize: {
