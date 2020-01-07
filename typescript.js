@@ -36,6 +36,7 @@ module.exports = {
           }
         ],
         "newlines-between": "always"
+        // TODO: alphabetize issue, waiting for new relase (https://github.com/benmosher/eslint-plugin-import/pull/1562)
         // alphabetize: {
         //   order: "asc"
         // }
