@@ -27,14 +27,6 @@ module.exports = {
       "warn",
       {
         groups: ["builtin", "external", ["parent", "sibling", "index"]],
-
-        pathGroups: [
-          {
-            pattern: "@nestjs/**",
-            group: "external",
-            position: "before"
-          }
-        ],
         "newlines-between": "always"
         // TODO: alphabetize issue, waiting for new relase (https://github.com/benmosher/eslint-plugin-import/pull/1562)
         // alphabetize: {
