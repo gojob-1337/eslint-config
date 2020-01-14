@@ -9,10 +9,9 @@ module.exports = {
     "plugin:import/typescript"
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint"],
+  plugins: ["@typescript-eslint", "simple-import-sort"],
   rules: {
     semi: ["error", "always"],
-    "sort-imports": ["warn", { ignoreCase: true, ignoreDeclarationSort: true }],
     "prettier/prettier": ["error", { singleQuote: true }],
     "@typescript-eslint/indent": ["error", 2],
     "@typescript-eslint/explicit-function-return-type": "off",
@@ -23,19 +22,8 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
-    "import/order": [
-      "warn",
-      {
-        groups: [
-          ["builtin", "external"],
-          ["parent", "sibling", "index"]
-        ],
-        "newlines-between": "always"
-        // TODO: alphabetize issue, waiting for new relase (https://github.com/benmosher/eslint-plugin-import/pull/1562)
-        // alphabetize: {
-        //   order: "asc"
-        // }
-      }
-    ]
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off",
+    "import/order": "off"
   }
 };
