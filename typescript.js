@@ -13,7 +13,7 @@ module.exports = {
   rules: {
     semi: ["error", "always"],
     "prettier/prettier": ["error", { singleQuote: true }],
-    "@typescript-eslint/indent": ["error", 2],
+    "@typescript-eslint/indent": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/prefer-interface": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
