@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2020-04-26
+
+### Changed
+
+- fixed the never-worked-before Import Groups for React
+
 ## [1.2.2] - 2020-04-26
 
 ### Changed

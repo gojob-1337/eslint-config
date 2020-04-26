@@ -11,7 +11,7 @@ module.exports = {
     "plugin:import/typescript"
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react-hooks"],
+  plugins: ["@typescript-eslint", "react-hooks", "simple-import-sort"],
   rules: {
     "sort-imports": ["warn", { ignoreCase: true, ignoreDeclarationSort: true }],
     semi: ["error", "always"],
@@ -27,25 +27,22 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "import/order": [
-      "warn",
-      {
-        groups: ["builtin", "external", ["parent", "sibling", "index"]],
-
-        pathGroups: [
-          {
-            pattern: "react",
-            group: "external",
-            position: "before"
-          }
-        ],
-        "newlines-between": "always"
-        // TODO: alphabetize issue, waiting for new relase (https://github.com/benmosher/eslint-plugin-import/pull/1562)
-        // alphabetize: {
-        //   order: "asc"
-        // }
-      }
-    ]
+    "simple-import-sort/sort": ["error", {
+      "groups": [
+        // Packages. `react` related packages come first.
+        ["^react$", "^react-dom$"],
+        // Internal packages.
+        ["^@?\\w"],
+        // Side effect imports.
+        ["^\\u0000"],
+        // Parent imports (put `..` last). And other relative imports (put `.` last).
+        ["^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+        // Style imports.
+        ["^.+\\.s?css$"],
+      ]
+    }],
+    "sort-imports": "off",
+    "import/order": "off"
   },
   settings: {
     react: {
