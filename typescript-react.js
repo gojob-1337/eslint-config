@@ -29,12 +29,10 @@ module.exports = {
     "react-hooks/exhaustive-deps": "warn",
     "simple-import-sort/sort": ["error", {
       "groups": [
-        // Packages. `react` related packages come first.
+        // `react` related packages come first.
         ["^react$", "^react-dom$"],
-        // Internal packages.
-        ["^@?\\w"],
-        // Side effect imports.
-        ["^\\u0000"],
+        // Internal packages. And "Side effect imports" (polluting namespace)
+        ["^@?\\w", "^\\u0000"],
         // Parent imports (put `..` last). And other relative imports (put `.` last).
         ["^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
         // Style imports.
