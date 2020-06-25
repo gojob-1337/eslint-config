@@ -1,12 +1,10 @@
 module.exports = {
   extends: [
+    'eslint:recommended',
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
     "prettier/@typescript-eslint",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript"
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "simple-import-sort"],
@@ -23,8 +21,8 @@ module.exports = {
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/member-ordering": 2,
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "simple-import-sort/sort": "error",
     "sort-imports": "off",
-    "import/order": "off"
   }
 };

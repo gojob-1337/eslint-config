@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.1] - 2020-06-25
+
+### Changed
+
+- upgrade `@typescript-eslint` packages (v2 to v3) (see [typescript-eslint](https://github.com/typescript-eslint/typescript-eslint/releases/tag/v3.0.0) release note)
+
 ## [1.3.2] - 2020-04-30
 
 ### Changed
