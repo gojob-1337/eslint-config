@@ -8,7 +8,7 @@ module.exports = {
     "prettier/react",
     "plugin:import/errors",
     "plugin:import/warnings",
-    "plugin:import/typescript"
+    "plugin:import/typescript",
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "react-hooks", "simple-import-sort"],
@@ -27,24 +27,33 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "simple-import-sort/sort": ["error", {
-      "groups": [
-        // `react` related packages come first.
-        ["^react$", "^react-dom$"],
-        // Internal packages. And "Side effect imports" (polluting namespace)
-        ["^@?\\w", "^\\u0000"],
-        // Parent imports (put `..` last). And other relative imports (put `.` last).
-        ["^\\.\\.(?!/?$)", "^\\.\\./?$", "^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
-        // Style imports.
-        ["^.+\\.s?css$"],
-      ]
-    }],
+    "simple-import-sort/sort": [
+      "error",
+      {
+        groups: [
+          // `react` related packages come first.
+          ["^react$", "^react-dom$"],
+          // Internal packages. And "Side effect imports" (polluting namespace)
+          ["^@?\\w", "^\\u0000"],
+          // Parent imports (put `..` last). And other relative imports (put `.` last).
+          [
+            "^\\.\\.(?!/?$)",
+            "^\\.\\./?$",
+            "^\\./(?=.*/)(?!/?$)",
+            "^\\.(?!/?$)",
+            "^\\./?$",
+          ],
+          // Style imports.
+          ["^.+\\.s?css$"],
+        ],
+      },
+    ],
     "sort-imports": "off",
-    "import/order": "off"
+    "import/order": "off",
   },
   settings: {
     react: {
-      version: "detect"
-    }
-  }
+      version: "detect",
+    },
+  },
 };
