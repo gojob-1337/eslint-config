@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    'eslint:recommended',
+    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "prettier",
     "plugin:prettier/recommended",
@@ -20,9 +20,10 @@ module.exports = {
     "@typescript-eslint/no-explicit-any": "off",
     "@typescript-eslint/no-use-before-define": "off",
     "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-floating-promises": ["error"],
     "@typescript-eslint/member-ordering": 2,
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "simple-import-sort/sort": "error",
     "sort-imports": "off",
-  }
+  },
 };
