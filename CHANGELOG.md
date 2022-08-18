@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [5.0.0] - 2022-08-18
+
+- upgrade `eslint-plugin-prettier` to v4 and `eslint-config-prettier`, and merge prettier configs
+- **BREAKING:** upgrade `eslint-plugin-simple-import-sort` to v7 and update config
+- upgrade `@typescript-eslint` monorepo to latest minor
+- upgrade `eslint-plugin-import` to latest minor
+
 ## [2.0.1] - 2020-06-25
 
 ### Changed

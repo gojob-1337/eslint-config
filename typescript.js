@@ -2,9 +2,7 @@ module.exports = {
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
   ],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint", "simple-import-sort"],
@@ -23,7 +21,7 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": ["error"],
     "@typescript-eslint/member-ordering": 2,
     "@typescript-eslint/explicit-module-boundary-types": "off",
-    "simple-import-sort/sort": "error",
+    "simple-import-sort/imports": "error",
     "sort-imports": "off",
   },
 };
