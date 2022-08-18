@@ -2,10 +2,7 @@ module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "prettier",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint",
-    "prettier/react",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
@@ -27,7 +24,7 @@ module.exports = {
     "@typescript-eslint/no-non-null-assertion": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "simple-import-sort/sort": [
+    "simple-import-sort/imports": [
       "error",
       {
         groups: [
