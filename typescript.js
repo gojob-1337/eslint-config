@@ -1,3 +1,7 @@
+"use strict";
+
+const keyValueEnumIdenticalPlugin = require("./src/rules/warn-key-value-in-enum-should-be-identical/index");
+
 module.exports = {
   extends: [
     "eslint:recommended",
@@ -5,7 +9,7 @@ module.exports = {
     "plugin:prettier/recommended",
   ],
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "simple-import-sort"],
+  plugins: ["@typescript-eslint", "simple-import-sort", {"keyValueEnumIdenticalPlugin" : keyValueEnumIdenticalPlugin }],
   rules: {
     semi: ["error", "always"],
     "prettier/prettier": ["error", { singleQuote: true }],
@@ -23,6 +27,6 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "simple-import-sort/imports": "error",
     "sort-imports": "off",
-    "warn-key-value-in-enum-should-be-identical": warnKeyValueInEnumShouldBeIdenticalRule
+    "keyValueEnumIdenticalPlugin/warn-key-value-in-enum-should-be-identical": "warn",
   },
 };

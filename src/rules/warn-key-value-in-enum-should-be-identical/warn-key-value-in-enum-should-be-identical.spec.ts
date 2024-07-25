@@ -1,6 +1,6 @@
 import { RuleTester } from "@typescript-eslint/rule-tester";
 import { resolve } from "path";
-import { warnKeyValueInEnumShouldBeIdenticalRule } from "./warn-key-value-in-enum-should-be-identical";
+import warnKeyValueInEnumShouldBeIdenticalRule from "./warn-key-value-in-enum-should-be-identical";
 
 const ruleTester = new RuleTester({
   parser: "@typescript-eslint/parser",

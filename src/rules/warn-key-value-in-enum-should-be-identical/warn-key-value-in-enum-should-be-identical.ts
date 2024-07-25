@@ -42,7 +42,7 @@ function getKey(node: TSESTree.Expression): string | number | undefined {
   }
 }
 
-export const warnKeyValueInEnumShouldBeIdenticalRule = ESLintUtils.RuleCreator.withoutDocs({
+const warnKeyValueInEnumShouldBeIdenticalRule = ESLintUtils.RuleCreator.withoutDocs({
   create: (context) => {
 
     return {
@@ -102,3 +102,5 @@ export const warnKeyValueInEnumShouldBeIdenticalRule = ESLintUtils.RuleCreator.w
   },
   defaultOptions: [],
 });
+
+export default warnKeyValueInEnumShouldBeIdenticalRule;
