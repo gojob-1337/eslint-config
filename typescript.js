@@ -23,5 +23,6 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "simple-import-sort/imports": "error",
     "sort-imports": "off",
+    "warn-key-value-in-enum-should-be-identical": warnKeyValueInEnumShouldBeIdenticalRule
   },
 };
