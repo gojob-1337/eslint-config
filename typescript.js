@@ -23,5 +23,12 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "simple-import-sort/imports": "error",
     "sort-imports": "off",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "Identifier[name=createQueryRunner]",
+        "message": "Do not use `createQueryRunner`, use `query` of the `entityManager` instead."
+      }
+    ]
   },
 };
